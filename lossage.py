@@ -82,7 +82,7 @@ def cb_key_combo(context: str, signal: str, signal_data: str):
     return weechat.WEECHAT_RC_OK
 
 
-def cb_lossage_cmd(_, __, ___):
+def cb_lossage_cmd(*_):
     buffer = weechat.buffer_search("python", SCRIPT_NAME)
     if not buffer:
         buffer = weechat.buffer_new(SCRIPT_NAME, "", "", "", "")
@@ -106,7 +106,7 @@ def cb_lossage_cmd(_, __, ___):
     return weechat.WEECHAT_RC_OK
 
 
-def cb_key_bindings_changed(_, __, ___):
+def cb_key_bindings_changed(*_):
     populate_key_bindings()
 
 
